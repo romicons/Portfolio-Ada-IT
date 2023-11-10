@@ -15,8 +15,11 @@ nav {
     background-position: center;
     background-attachment: fixed;
     background-size: cover;
-    position: fixed;
     box-shadow: 0em 0.1875em 0.8125em 0em rgb(194, 194, 194);
+    top: 0;
+    right: 0;
+    left: 0;
+    z-index: 1030;
 }
 body {
     margin: 0;
@@ -24,6 +27,28 @@ body {
     font-family: 'Flamenco', cursive;
     background-color: #FEFDFC;
     scroll-behavior: smooth;
+}
+
+h1 {
+    display: inline-block;
+    font-size: 3.75em;
+    color: #000;
+    background: #FEFDFC;
+    mix-blend-mode: multiply;
+    position: relative;
+    transition: 0.30s ease-in-out 0s;
+}
+
+h1::before {
+    content: '';
+    width: 100%;
+    height: 100%;
+    display: block;
+    background: linear-gradient(to right, #021E23, #403153, #9F5B98, #D58DC7, #DE94CF, #E7A2D7);
+    mix-blend-mode: screen;
+    position: absolute;
+    top: 0;
+    left: 0;
 }
 
 footer {
@@ -90,3 +115,70 @@ a {
     box-shadow: 0em 0em 0.375em 0.0625em #f2f1f9;
     color: #983175;
 } 
+
+.container-fluid {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 36em;
+    margin: 6em auto;
+    width: 100%;
+}
+
+.presentación {
+    max-width: 30em;
+    width: 40%;
+    height: 30em;
+    padding-left: 3em;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+
+.img_bienvenida {
+    display: flex;
+    width: 40%;
+    height: 80%;
+    padding-left: 2em;
+    justify-content: end;
+    max-width: 30em;
+    min-width: 25em;
+}
+
+.welcome_title {
+    font-size: 3.125em;
+    margin-bottom: -0.2em;
+}
+
+.diff_color {
+    display: inline-block;
+    font-size: 3.75em;
+    color: #000;
+}
+
+.presentation {
+    display: flex;
+    font-size: 1.2em;
+    justify-content: end;
+    margin-top: -30px;
+}
+
+.button_proyects {
+    width: 30%;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    margin-left: 16em;
+    background-color: #3E3051;
+    color: #FEFDFC;
+    padding: 0.5em 1.5em;
+    border-radius: 0.50em;
+    border: 2px;
+    font-weight: bold;
+    
+}
+
+.button_proyects:hover {
+    box-shadow: 0em 0em 0.375em 0.0625em #9F5B98;
+    color:#E7A2D7;
+}
