@@ -20,18 +20,26 @@
         <!-- INICIO DEL NAVBAR -->
         <nav>
             <ul class="navbar">
-                <li><a href="#bienvenida" class="nav-item link-ltr">
+                <li>
+                    <a href="#bienvenida" class="nav-item link-ltr">
                     Bienvenidx
-                </a></li>
-                <li><a href="#conocimientos" class="nav-item link-ltr">
+                    </a>
+                </li>
+                <li>
+                    <a href="#conocimientos" class="nav-item link-ltr">
                     Conocimientos
-                </a></li>
-                <li> <a href="#proyectos" class="nav-item link-ltr">
+                    </a>
+                </li>
+                <li> 
+                    <a href="#proyectos" class="nav-item link-ltr">
                     Proyectos
-                </a></li>
-                <li><a href="#contacto" class="nav-item button-contact">
+                    </a>
+                </li>
+                <li>
+                    <a href="#contacto" class="nav-item button-contact">
                     Contacto
-                </a></li>
+                    </a>
+                </li>
             </ul>
          </nav>
          <!-- CIERRE DEL NAVBAR -->
@@ -195,7 +203,8 @@
                     </div>
                     <div class="textarea_form">
                             <label for="textarea">Mensaje*</label>
-                            <input type="text" name="textarea" required placeholder="Deja tu mensaje aquí.">
+                            <textarea name="textarea" required placeholder="Deja tu mensaje aquí.">
+                            </textarea>
                     </div>
                             <button type="submit">Enviar</button>
                             <input type="hidden" name="_next" value="https://localhost:8000">
@@ -211,14 +220,14 @@
 
 <!-- INICIO DEL FOOTER -->
 <footer>
-    <nav class="nav-footer">
-        <ul>
+    <div class="nav_footer">
+        <ul class="navbar_footer">
             <li class="nav-item link-ltr">
                 <a href="#bienvenida">BIENVENIDX</a>
             </li>
             <li class="nav-item link-ltr">
                 <a href="#conocimientos">CONOCIMIENTOS</a>
-            </li nav-item link-ltr>
+            </li>
             <li class="nav-item link-ltr">
                 <a href="#proyectos">PROYECTOS</a>
             </li>
@@ -226,21 +235,21 @@
                 <a href="#contacto">CONTACTO</a>
             </li>
         </ul>
-    </nav>
+    </div>
     <div class="socialnetworks_footer">
         <ul class="footer_nav_menu">
             <li>
-                <a href="https://github.com/romicons" target="_blank"><i class="fa-brands fa-github"></i></a>
+                <a href="https://github.com/romicons" target="_blank" class="link_footer"><i class="fab fa-github-alt  footer_icon"></i></a>
             </li>
             <li>
-                <a href="https://www.linkedin.com/in/romina-evelin-constantinoff/" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
+                <a href="https://www.linkedin.com/in/romina-evelin-constantinoff/" target="_blank" class="link_footer"><i class="fab fa-linkedin-in footer_icon"></i></a>
             </li>
             <li>
-                <a href="mailto:romina.constantinoff@gmail.com" target="_blank"><i class="fa-regular fa-at"></i></a>
+                <a href="mailto:romina.constantinoff@gmail.com" target="_blank" class="link_footer"><i class="fas fa-envelope footer_icon"></i></a>
             </li>
         </ul>
     </div>
-    <p>Romina Constantinoff - 2023</p>
+    <p class="design_by">Romina Constantinoff - 2023</p>
 </footer>
 <!-- CIERRE DEL FOOTER -->
 </html>
