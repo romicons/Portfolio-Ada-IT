@@ -1,6 +1,4 @@
-* {
-    border: border-box;
-}
+/* INICIO DEL ESTILADO SOBRE SELECTORES DE TIPO */
 
 nav {
     width: 100%;
@@ -10,6 +8,7 @@ nav {
     position: fixed;
     top: 0em;
     padding-top: 1em;
+    box-sizing: none;
     background-image: url("https://cdn.pixabay.com/photo/2016/05/22/20/13/background-1409125_960_720.png");
     background-repeat: no-repeat;
     background-position: center;
@@ -21,6 +20,7 @@ nav {
     left: 0;
     z-index: 1030;
 }
+
 body {
     margin: 0;
     padding: 0;
@@ -53,10 +53,22 @@ h1::before {
 
 footer {
     font-family: 'Libre Barcode 39 Text', cursive;
+    width: 100%;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    background-image: url("https://cdn.pixabay.com/photo/2016/05/22/20/13/background-1409125_960_720.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+    background-size: cover;
+    color: #FEFDFC;
 }
 
 ul li {
     text-decoration: none;
+    list-style: none;
+    align-items: center;
 }
 
 a {
@@ -64,6 +76,58 @@ a {
     position: relative;
 }
 
+form {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    position: relative;
+}
+
+input {
+    border: 0;
+    border-radius: 10px;
+    background-color: #f6f7fb;
+    border: 1px solid #403153;
+    font-size: var(--text-sm);
+    padding: 0.2rem 0.3rem;
+    display: block;
+    width: 100%;
+    outline: none;
+    box-shadow: 0px 0px 0px 0px rgba(0, 0, 0, 0);
+    transition: 0.2s;
+}
+
+label {
+    display: block;
+    padding-bottom: 0.625em;
+    font-size: 1.2rem;
+}
+
+button {
+    width: 30%;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    margin-left: 12em;
+    background-color: #3E3051;
+    color: #FEFDFC;
+    padding: 0.5em 1.5em;
+    border-radius: 0.50em;
+    border: 2px;
+    font-weight: bold;
+    
+}
+
+button:hover {
+    box-shadow: 0em 0em 0.375em 0.0625em #9F5B98;
+    color:#E7A2D7;
+}
+
+/* CIERRE DEL ESTILADO SOBRE SELECTORES DE TIPO */
+
+/* INICIO DEL ESTILADO SOBRE SELECTORES DE CLASE */
+
+        /* INICIO DEL ESTILADO SOBRE LOS ELEMENTOS DEL NAVBAR */
 .navbar {
     display: flex;
     text-transform: uppercase;
@@ -74,10 +138,12 @@ a {
 }
 
 .nav-item {
+    font-weight: bold;
     margin: 0em 1.2em;
     padding: 1.2em 0em;
     font-size: 1.2em;
-    color: white
+    color: white;
+    text-shadow: #000 1px;
 }
 
 .nav-item:hover {
@@ -116,12 +182,15 @@ a {
     color: #983175;
 } 
 
+        /* CIERRE DEL ESTILADO SOBRE LOS ELEMENTOS DEL NAVBAR */
+
+        /* INICIO DEL ESTILADO SOBRE LOS ELEMENTOS DE LA SECCIÓN DE BIENVENIDA */
+
 .container-fluid {
     display: flex;
     align-items: center;
     justify-content: center;
-    height: 36em;
-    margin: 6em auto;
+    padding-top: 3em;
     width: 100%;
 }
 
@@ -138,7 +207,7 @@ a {
 .img_bienvenida {
     display: flex;
     width: 40%;
-    height: 80%;
+    height: 70%;
     padding-left: 2em;
     justify-content: end;
     max-width: 30em;
@@ -182,3 +251,286 @@ a {
     box-shadow: 0em 0em 0.375em 0.0625em #9F5B98;
     color:#E7A2D7;
 }
+
+        /* CIERRE DEL ESTILADO SOBRE LOS ELEMENTOS DE LA SECCIÓN DE BIENVENIDA */
+
+        /* INICIO DEL ESTILADO SOBRE LOS ELEMENTOS DE LA SECCIÓN DE CONOCIMIENTOS */
+
+.section_title {
+    font-size: 2.5em;
+    margin-top: 1.5em;
+    font-weight: bold;
+}
+
+.section_description {
+    display: flex;
+    font-size: 1.2rem;
+    justify-content: center;
+    margin: -1em 8em 1em 8em;
+    text-align: center;
+}
+
+.skill_card {
+    width: 12rem;
+    height: 12rem;
+    background-color: white;
+    color: #403153;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    margin: 1em 1.5em;
+    align-items: center;
+    justify-content: center;
+    box-shadow: #021E23 0px 3px 8px;
+}
+
+.skill_card:hover {
+    box-shadow: 0em 0em 0.375em 0.0625em #983175;
+    color: #983175;
+}
+
+.skill {
+    font-family: 'Alegreya Sans SC', sans-serif;
+    font-size: 1.5rem;
+}
+
+.skill_icon {
+    font-size: 6rem;
+    margin-top: 1.5rem;
+}
+
+        /* CIERRE DEL ESTILADO SOBRE LOS ELEMENTOS DE LA SECCIÓN DE CONOCIMIENTOS */
+
+        /* INICIO DEL ESTILADO SOBRE LOS ELEMENTOS DE LA SECCIÓN DE PROYECTOS */
+
+.project_card {
+    width: 18rem;
+    height: 18rem;
+    background-color: white;
+    color: #403153;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    margin: 1em 1em;
+    padding-top: 1.5em;
+    align-items: center;
+    justify-content: center;
+    box-shadow: #021E23 0px 3px 8px;
+}
+
+.project_card:hover {
+    box-shadow: 0em 0em 0.375em 0.0625em #983175;
+    color: #983175;
+}
+
+.img_card {
+    height: 12em;
+    width: 15em;
+    margin: 0.2em;
+}
+
+.proyect {
+    font-family:'Alegreya Sans SC', sans-serif;
+    font-size: 1.2em;
+    text-align: center;
+}
+
+        /* CIERRE DEL ESTILADO SOBRE LOS ELEMENTOS DE LA SECCIÓN DE PROYECTOS */
+
+        /* INICIO DEL ESTILADO SOBRE LOS ELEMENTOS DE LA SECCIÓN DE CONTACTO */
+
+.container-contact-section {
+    display: flex;
+    justify-content: space-between;
+    margin: 2% auto;
+    width: 70%;
+    position: relative;
+    border: 0.1em solid #021E23;
+    border-radius: 10px;
+    box-shadow: #021E23 0px 3px 8px;
+}
+
+            /* INICIO DEL ESTILADO SOBRE LOS ELEMENTOS DE LA SECCIÓN DE REDES SOCIALES DENTRO DE CONTACTO */
+
+.contact-section {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    margin: 1% 2%;
+}
+
+.contact_title {
+    display: flex;
+    padding-left: 5%;
+    font-size: 2rem;
+    box-sizing: border-box;
+    text-align: left;
+}
+
+.contact_description {
+    display: flex;
+    font-size: 1.2rem;
+    margin-left: 5%;
+    margin-right: 5%;
+    text-align: justify;
+}
+
+.contact-socialnetworks {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    box-sizing: border-box;
+    text-decoration: none;
+    line-height: 2rem;
+    justify-content: left;
+}
+
+.contact_link {
+    display: flex;
+    font-size: 1.3rem;
+    color: #403153;
+    padding-top: 1rem;
+}
+
+.link_contact {
+    display: flex;
+    align-items: center;
+    color: #403153;
+}
+
+.link_contact:hover {
+    color: #983175;
+}
+
+.icon_contact {
+    display: block;
+    width: 2.2rem;
+    height: 2.2rem;
+    background-color: #FEFDFC;
+    color: #403153;
+    font-size: 2rem;
+    margin-right: 0.2rem;
+    text-align: left;
+    transition: 0.2s;
+}
+
+.icon_contact:hover {
+    color: #983175;
+}
+
+            /* CIERRE DEL ESTILADO SOBRE LOS ELEMENTOS DE LA SECCIÓN DE REDES SOCIALES DENTRO DE CONTACTO */
+
+            /* INICIO DEL ESTILADO SOBRE LOS ELEMENTOS DEL FORMULARIO DE CONTACTO */
+
+.form_section {
+    width: 50%;
+    margin: 1% 2%;
+}
+
+.name_lastname {
+    display: flex;
+    text-align: left;
+}
+
+.name_lastname label {
+    display: block;
+    padding-bottom: 0.625em;
+}
+
+.form_data {
+    width: 12em;
+    height: 4em;
+    padding: 0.625em;
+    display: inline-block;
+}
+
+.mail_form {
+    width: 25em;
+    height: 4em;
+    padding: 0.625em;
+    margin-top: 0.25em;
+}
+
+.textarea_form {
+    width: 25em;
+    height: 12.625em;
+    padding: 0.625em;
+    margin-top: 0.25em;
+  }
+
+.textarea_form input {
+    width: 25em;
+    height: 10em;
+    padding: 0.625em;
+    margin-top: 0.25em;
+    border-radius: 10px;
+    background-color: #f6f7fb;
+    border: 1px solid #403153;
+    font-size: var(--text-sm);
+    padding: 0.2rem 0.3rem;
+    display: block;
+    outline: none;
+    box-shadow: 0px 0px 0px 0px rgba(0, 0, 0, 0);
+    transition: 0.2s;
+  }
+
+            /* CIERRE DEL ESTILADO SOBRE LOS ELEMENTOS DEL FORMULARIO DE CONTACTO */
+
+        /* INICIO DEL ESTILADO SOBRE LOS ELEMENTOS DEL FOOTER */
+
+.nav-footer {
+    display: flex;
+    margin: 0;
+    color: #FEFDFC;
+    position: relative;
+    font-family: 'Flamenco', cursive;
+}
+
+.footer_nav_menu {
+    display: flex;
+    margin: 0;
+    color: #FEFDFC;
+    position: relative;
+    font-family: 'Flamenco', cursive;
+}
+
+        /* CIERRE DEL ESTILADO SOBRE LOS ELEMENTOS DEL FOOTER */
+
+/* CIERRE DEL ESTILADO SOBRE SELECTORES DE CLASE */
+
+/* INICIO DEL ESTILADO SOBRE SELECTORES DE ID */
+
+#bienvenida {
+    height: 100vh;
+    position: relative;
+    display: flex;
+}
+
+#conocimientos {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    height: 36em;
+    margin: 2.5em auto;
+    padding-top: 2em;
+    width: 60%;
+    position: relative;
+}
+
+#proyectos {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    margin: 2.5em auto;
+    padding-top: 3em;
+    width: 70%;
+    position: relative;
+}
+
+#contacto {
+    padding-top:4rem;
+}
+
+/* CIERRE DEL ESTILADO SOBRE SELECTORES DE ID */
