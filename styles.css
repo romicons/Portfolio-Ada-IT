@@ -97,14 +97,13 @@ form {
 input {
     border: 0;
     border-radius: 10px;
-    background-color: #f6f7fb;
     border: 1px solid #403153;
     padding: 0.3em 0.3em;
     display: block;
     width: 100%;
     outline: none;
     font-family: 'Flamenco', cursive;
-    font-size: 1.2rem;
+    font-size: 1.2em;
 }
 
 input:focus {
@@ -117,7 +116,7 @@ input:focus {
 label {
     display: block;
     padding-bottom: 0.625em;
-    font-size: 1.2rem;
+    font-size: 1.2em;
 }
 
 textarea {
@@ -125,9 +124,7 @@ textarea {
     height: 8em;
     margin-top: 0.25em;
     border-radius: 10px;
-    background-color: #f6f7fb;
     border: 1px solid #403153;
-    font-size: var(--text-sm);
     padding: 0.2rem 0.3rem;
     display: block;
     outline: none;
@@ -135,6 +132,7 @@ textarea {
     resize: none;
     font-family: 'Flamenco', cursive;
     font-size: 1.2rem;
+    color: black;
   }
 
 textarea:focus {
@@ -166,7 +164,7 @@ button {
     border: 2px;
     font-weight: bold;
     font-family: 'Flamenco', cursive;
-    font-size: 1.2rem;
+    font-size: 1.2em;
     
 }
 
@@ -670,14 +668,14 @@ i {
 
 .form_data {
     width: 90%;
-    height: 4em;
+    height: 5em;
     padding: 0.625em;
     display: flex;
     flex-direction: column;
 }
 
 .mail_form {
-    height: 4em;
+    height: 5em;
     padding: 0.625em;
     margin-top: 0.25em;
 }
@@ -685,9 +683,64 @@ i {
 .textarea_form {
     padding: 0.625em;
     margin-top: 0.25em;
-  }
+}
 
             /* CIERRE DEL ESTILADO SOBRE LOS ELEMENTOS DEL FORMULARIO DE CONTACTO */
+
+        /* INICIO DEL ESTILADO DE LA VENTANA MODAL */
+
+.modal {
+    display: none; /* Por defecto, estará oculto */
+    position: fixed; /* Posición fija */
+    z-index: 1; /* Se situará por encima de otros elementos de la página*/
+    padding-top: 4em; /* El contenido estará situado a 200px de la parte superior */
+    left: 0;
+    top: 0;
+    width: 100%; /* Ancho completo */
+    height: 100%; /* Algura completa */
+    overflow: auto; /* Se activará el scroll si es necesario */
+    background-color: rgba(0,0,0,0.5); /* Color negro con opacidad del 50% */
+}
+
+.modal_content {
+    position: relative; /* Relativo con respecto al contenedor -modal- */
+    background-color: white;
+    margin: auto; /* Centrada */
+    padding: 3em 3em;
+    width: 50%;
+    border-radius: 10px;
+    text-align: justify;
+    font-size: 1.5em;
+    -webkit-animation-name: animarsuperior;
+    -webkit-animation-duration: 0.5s;
+    animation-name: animarsuperior;
+    animation-duration: 0.5s
+  }
+
+        @keyframes animatetop {
+            from {top:-300px; opacity:0} 
+            to {top:0; opacity:1}
+  }
+
+        @keyframes animarsuperior {
+            from {top:-300px; opacity:0}
+            to {top:0; opacity:1}
+  }
+
+  .close_button {
+    color: black;
+    float: right;
+    font-size: 30px;
+    font-weight: bold;
+  }
+
+  .close_button:hover, .close_button:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+  }
+
+        /* CIERRE DEL ESTILADO DE LA VENTANA MODAL */
 
         /* INICIO DEL ESTILADO SOBRE LOS ELEMENTOS DEL FOOTER */
 
@@ -831,6 +884,12 @@ i {
     flex-wrap: wrap;
     align-items: center;
     justify-content: center;
+}
+
+#name-error, #lastname-error, #email-error, #textarea-error {
+    font-size: 1em;
+    font-weight: bold;
+    color: red;
 }
 
 /* CIERRE DEL ESTILADO SOBRE SELECTORES DE ID */

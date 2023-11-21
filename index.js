@@ -1,11 +1,3 @@
-// D O M
-
-const welcomeButton = document.querySelector("#bienvenida")
-const skillsButton = document.querySelector("#conocimientos")
-const projectsButton = document.querySelector("#proyectos")
-const contactButton = document.querySelector("#contacto")
-
-
 // FUNCIÓN PARA DESPLEGAR Y CERRAR EL MENÚ MOBILE
 
 var bOpen = true;
@@ -84,15 +76,107 @@ function effect(doOpen, barsTiming) {
   }
 }
 
-// FUNCIONES DE BOTONES
+// FUNCIÓN VENTANA MODAL AL VALIDAR EL FORMULARIO
 
-const buttonWindowLocation = (boton, ancla) => {
-  boton.onclick = () => {
-  window.location.hash = ancla
+var modal = document.getElementById("modal_window");
+var boton = document.getElementById("submit_button");
+var span = document.getElementsByClassName("close_button")[0];
+
+boton.addEventListener("click", function (event) {
+  if (formularioEsValido()) {
+    modal.style.display = "block";
+  } else {
+    event.preventDefault();
   }
+});
+
+span.addEventListener("click", function () {
+  modal.style.display = "none";
+});
+
+window.addEventListener("click", function (event) {
+  if (event.target == modal) {
+    modal.style.display = "none";
   }
+});
+
+document.addEventListener('DOMContentLoaded', function () {
+  var modal = document.getElementById("modal_window");
+  var boton = document.getElementById("submit_button");
+  var span = document.getElementsByClassName("close_button")[0];
+
+  boton.addEventListener("click", function (event) {
+    if (formularioEsValido()) {
+      modal.style.display = "block";
+    } else {
+      event.preventDefault();
+    }
+  });
+
+  span.addEventListener("click", function () {
+    modal.style.display = "none";
+  });
+
+  window.addEventListener("click", function (event) {
+    if (event.target == modal) {
+      modal.style.display = "none";
+    }
+  });
+
+  var campos = document.querySelectorAll("#name, #lastname, #email, #textarea");
+  campos.forEach(function (campo) {
+    campo.addEventListener("input", function () {
+      ocultarMensajeError(campo);
+    });
+  });
+
+  // FUNCIÓN PARA QUE AL DAR ERROR DURANTE EL ENVÍO SE DESPLIEGUEN LOS CAMPOS DE ERROR
   
-  buttonWindowLocation(welcomeButton, "bienvenida")
-  buttonWindowLocation(skillsButton, "conocimientos")
-  buttonWindowLocation(projectsButton, "proyectos")
-  buttonWindowLocation(contactButton, "contacto")
+  function formularioEsValido() {
+    var nameInput = document.getElementById('name');
+    var lastnameInput = document.getElementById('lastname');
+    var emailInput = document.getElementById('email');
+    var textareaInput = document.getElementById('textarea');
+
+    ocultarMensajeError(nameInput);
+    ocultarMensajeError(lastnameInput);
+    ocultarMensajeError(emailInput);
+    ocultarMensajeError(textareaInput);
+
+    var esValido = true;
+
+    if (!nameInput.checkValidity()) {
+      mostrarMensajeError(nameInput, "Por favor, ingresa tu nombre.");
+      esValido = false;
+    }
+
+    if (!lastnameInput.checkValidity()) {
+      mostrarMensajeError(lastnameInput, "Por favor, ingresa tu apellido.");
+      esValido = false;
+    }
+
+    if (!emailInput.checkValidity()) {
+      mostrarMensajeError(emailInput, "Por favor, ingresa un correo electrónico válido.");
+      esValido = false;
+    }
+
+    if (!textareaInput.checkValidity()) {
+      mostrarMensajeError(textareaInput, "Por favor, ingresa tu mensaje.");
+      esValido = false;
+    }
+
+    return esValido;
+  }
+
+// FUNCIÓN DE MOSTRAR U OCULTAR LOS MENSAJES DE ERROR 
+
+  function mostrarMensajeError(campo, mensaje) {
+    var mensajeError = document.getElementById(`${campo.id}-error`);
+    mensajeError.textContent = mensaje;
+  }
+
+  function ocultarMensajeError(campo) {
+    var mensajeError = document.getElementById(`${campo.id}-error`);
+    mensajeError.textContent = "";
+  }
+});
