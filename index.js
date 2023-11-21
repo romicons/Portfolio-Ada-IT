@@ -3,9 +3,6 @@
 var bOpen = true;
 
 $(function() {
-  $('.nav_mobile').prepend('<div class="top"/>' +
-                     '<div class="mid"/>' +
-                     '<div class="bot"/>' );
   $('.hamb').click(function(){
     effect(bOpen,["slow","slow","slow"]);
     bOpen = !bOpen;
@@ -24,24 +21,31 @@ $(function() {
 
 $('.nav-item').click(function() {
   if (!bOpen) {
-    bOpen = !bOpen; // cambiar el estado del menu
-    $(".hamb").toggleClass("active"); // remover la clase activa de la hamburguesa
-    document.querySelector(".nav_mobile").classList.remove("nav_animation");
-    var targetSectionId = $(this).attr('href');
+    bOpen = !bOpen; 
+    $(".hamb").toggleClass("active"); 
+    
     var t = 0;
-    $(".nav_container ul").animate({ top: "23%" });
-    $(".nav_container ul > li").each(function(){
-      $(this).delay(t += Math.random() * 111).fadeOut().animate({ margin: "1%" });
+    var targetSectionId = $(this).attr('href');
+    
+    $(".nav_container ul > li").each(function() {
+      $(this).delay(t += Math.random() * 50).fadeOut().animate({ margin: "1%" });
     });
-    $(".top, .mid, .bot").delay(555).animate({ height: "0", top: "0" });
-    $("main, footer").delay(777).fadeIn().removeClass("grow").addClass("grow");
     setTimeout(function() {
-      $('html, body').animate({
-        scrollTop: $(targetSectionId).offset().top
-      }, 'slow');
-    }, 1200); 
+      $(".nav_container").animate({ height: "0" }, 100, function() {
+        document.querySelector(".nav_mobile").classList.remove("nav_animation");
+        $("main, footer").delay(300).fadeIn().removeClass("grow").addClass("grow");
+        setTimeout(function() {
+          $('html, body').animate({
+            scrollTop: $(targetSectionId).offset().top
+          }, 400);
+        }, 500);
+      });
+    }, t + 100);
   }
 });
+
+
+
 
 // FUNCIÓN DE ANIMACIÓN DEL NAV MOBILE Y SUS BOTONES
 
@@ -49,29 +53,20 @@ function effect(doOpen, barsTiming) {
   $(".hamb").toggleClass("active");
   if (doOpen) {
       $("main, footer").css('pointer-events', 'none').fadeOut();
-
-      var top = -25;
-      $(".top, .mid, .bot").each(function (n) {
-          $(this).fadeIn().animate({ height: "50.333%", top: `${top}%` }, barsTiming[n], 'easeOutBounce');
-          top += 50;
-      });
-
       var t = 0;
-      $(".nav_container ul").removeAttr("style").delay(333).animate({ top: "37%" });
+      $(".nav_container").removeAttr("style").delay(333).animate({ height: "100vh" });
       $(".nav_container ul > li").removeAttr("style").each(function () {
-          $(this).delay(111 + (t += Math.random() * (t / 3 + 111))).fadeIn().animate({ margin: "7%" });
+          $(this).delay(111 + (t += Math.random() * (t / 3 + 111))).fadeIn().animate({ margin: "10%" });
       });
-
       setTimeout(function () {
           $("main, footer").css('pointer-events', 'auto');
-      }, 1200);
+      }, 1500);
   } else {
       var t = 0;
-      $(".nav_container ul").animate({ top: "23%" });
+      $(".nav_container").animate({ height: "0" });
       $(".nav_container ul > li").each(function () {
-          $(this).delay(t += Math.random() * 111).fadeOut().animate({ margin: "1%" });
+          $(this).delay(t += Math.random() * 111).fadeOut().animate;
       });
-      $(".top,.mid,.bot").delay(555).animate({ height: "0", top: "0" });
       $("main, footer").delay(777).fadeIn().removeClass("grow").addClass("grow");
   }
 }
@@ -131,7 +126,7 @@ document.addEventListener('DOMContentLoaded', function () {
   });
 
   // FUNCIÓN PARA QUE AL DAR ERROR DURANTE EL ENVÍO SE DESPLIEGUEN LOS CAMPOS DE ERROR
-  
+
   function formularioEsValido() {
     var nameInput = document.getElementById('name');
     var lastnameInput = document.getElementById('lastname');
