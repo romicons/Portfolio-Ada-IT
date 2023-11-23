@@ -118,7 +118,7 @@
             </h2>
             <div>
                 <p class="section_description">
-                    Como programadora, cuento con una insaciable curiosidad me motiva a investigar, aprender y sumar nuevas habilidades a mi arsenal. Algunas de ellas las adquirí de manera autodidacta, otras con cursos y excelentes profesorxs. Mi objetivo es constantemente mejorar mi código y adquirir buenas prácticas.
+                    Como programadora, cuento con una insaciable curiosidad que me motiva a investigar, aprender y sumar nuevas habilidades a mi arsenal. Algunas de ellas las adquirí de manera autodidacta, otras con cursos y excelentes profesorxs. Mi objetivo es constantemente mejorar mi código y adquirir buenas prácticas.
                 </p>
             </div>
             <div class="skill_card">
@@ -265,23 +265,23 @@
                         <div class="name_lastname">
                             <div class="form_data">
                                 <label for="name">Nombre*</label>
-                                <input type="text" id="name" placeholder="Nombre" aria-label="Name" required>
+                                <input type="text" id="name" placeholder="Nombre" name="name" aria-label="Name" required>
                                 <span id="name-error" class="error"></span>
                             </div>
                             <div class="form_data">
                                 <label for="lastname">Apellido*</label>
-                                <input type="text" id="lastname" placeholder="Apellido" aria-label="Your lastname" required>
+                                <input type="text" id="lastname" placeholder="Apellido" name="lastname" aria-label="Your lastname" required>
                                 <span id="lastname-error" class="error"></span>
                             </div>
                         </div>
                         <div class="mail_form">
                                 <label for="email">Email*</label>
-                                <input type="email" id="email" placeholder="example@gmail.com" aria-label="Your email" required>
+                                <input type="email" id="email" placeholder="example@gmail.com" name="email" aria-label="Your email" required>
                                 <span id="email-error" class="error"></span>
                         </div>
                         <div class="textarea_form">
                                 <label for="textarea">Mensaje*</label>
-                                <textarea id="textarea" placeholder="Deja tu mensaje aquí." aria-label="Your mesagge" required></textarea>
+                                <textarea id="textarea" placeholder="Deja tu mensaje aquí." name="message" aria-label="Your mesagge" required></textarea>
                         </div>
                         <span id="textarea-error" class="error"></span>
                                 <button type="submit" id="submit_button">Enviar</button>
@@ -292,6 +292,7 @@
                                 <span class="close_button">&times;</span>
                                     <h3>¡Gracias!</h3>
                                     <p>Tu mensaje ha sido enviado con éxito. Me comunicaré contigo a la brevedad.</p>
+                                    <img src="img/mailsucess.svg">
                             </div>
                         </div>
                     </form>
