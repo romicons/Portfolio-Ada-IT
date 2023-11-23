@@ -1,3 +1,4 @@
+
 // FUNCIÓN PARA INTERCAMBIAR ENTRE EL MODO OSCURO Y EL MODO DÍA
 
 document.addEventListener('DOMContentLoaded', function () {
@@ -39,12 +40,12 @@ $(function() {
 
 $('.nav-item').click(function() {
   if (!bOpen) {
-    bOpen = !bOpen; 
-    $(".hamb").toggleClass("active"); 
-    
+    bOpen = !bOpen;
+    $(".hamb").toggleClass("active");
+
     var t = 0;
     var targetSectionId = $(this).attr('href');
-    
+
     $(".nav_container ul > li").each(function() {
       $(this).delay(t += Math.random() * 50).fadeOut().animate({ margin: "1%" });
     });
@@ -61,8 +62,53 @@ $('.nav-item').click(function() {
     }, t + 100);
   }
 });
+// FUNCIÓN DE MOSTRAR U OCULTAR LOS MENSAJES DE ERROR
+function mostrarMensajeError(campo, mensaje) {
+    var mensajeError = document.getElementById(`${campo.id}-error`);
+    mensajeError.textContent = mensaje;
+  };
 
+function ocultarMensajeError(campo) {
+    var mensajeError = document.getElementById(`${campo.id}-error`);
+    mensajeError.textContent = "";
+  };
 
+// FUNCIÓN PARA QUE AL DAR ERROR DURANTE EL ENVÍO SE DESPLIEGUEN LOS CAMPOS DE ERROR
+function formularioEsValido() {
+    let nameInput = document.getElementById('name');
+    let lastnameInput = document.getElementById('lastname');
+    let emailInput = document.getElementById('email');
+    let textareaInput = document.getElementById('textarea');
+
+    ocultarMensajeError(nameInput);
+    ocultarMensajeError(lastnameInput);
+    ocultarMensajeError(emailInput);
+    ocultarMensajeError(textareaInput);
+
+    let esValido = true;
+
+    if (!nameInput.checkValidity()) {
+      mostrarMensajeError(nameInput, "Por favor, ingresa tu nombre.");
+      esValido = false;
+    }
+
+    if (!lastnameInput.checkValidity()) {
+      mostrarMensajeError(lastnameInput, "Por favor, ingresa tu apellido.");
+      esValido = false;
+    }
+
+    if (!emailInput.checkValidity()) {
+      mostrarMensajeError(emailInput, "Por favor, ingresa un correo electrónico válido.");
+      esValido = false;
+    }
+
+    if (!textareaInput.checkValidity()) {
+      mostrarMensajeError(textareaInput, "Por favor, ingresa tu mensaje.");
+      esValido = false;
+    }
+
+    return esValido;
+  }
 
 
 // FUNCIÓN DE ANIMACIÓN DEL NAV MOBILE Y SUS BOTONES
@@ -142,54 +188,4 @@ document.addEventListener('DOMContentLoaded', function () {
       ocultarMensajeError(campo);
     });
   });
-
-  // FUNCIÓN PARA QUE AL DAR ERROR DURANTE EL ENVÍO SE DESPLIEGUEN LOS CAMPOS DE ERROR
-
-  function formularioEsValido() {
-    var nameInput = document.getElementById('name');
-    var lastnameInput = document.getElementById('lastname');
-    var emailInput = document.getElementById('email');
-    var textareaInput = document.getElementById('textarea');
-
-    ocultarMensajeError(nameInput);
-    ocultarMensajeError(lastnameInput);
-    ocultarMensajeError(emailInput);
-    ocultarMensajeError(textareaInput);
-
-    var esValido = true;
-
-    if (!nameInput.checkValidity()) {
-      mostrarMensajeError(nameInput, "Por favor, ingresa tu nombre.");
-      esValido = false;
-    }
-
-    if (!lastnameInput.checkValidity()) {
-      mostrarMensajeError(lastnameInput, "Por favor, ingresa tu apellido.");
-      esValido = false;
-    }
-
-    if (!emailInput.checkValidity()) {
-      mostrarMensajeError(emailInput, "Por favor, ingresa un correo electrónico válido.");
-      esValido = false;
-    }
-
-    if (!textareaInput.checkValidity()) {
-      mostrarMensajeError(textareaInput, "Por favor, ingresa tu mensaje.");
-      esValido = false;
-    }
-
-    return esValido;
-  }
-
-// FUNCIÓN DE MOSTRAR U OCULTAR LOS MENSAJES DE ERROR 
-
-  function mostrarMensajeError(campo, mensaje) {
-    var mensajeError = document.getElementById(`${campo.id}-error`);
-    mensajeError.textContent = mensaje;
-  }
-
-  function ocultarMensajeError(campo) {
-    var mensajeError = document.getElementById(`${campo.id}-error`);
-    mensajeError.textContent = "";
-  }
 });
