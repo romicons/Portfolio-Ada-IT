@@ -104,9 +104,9 @@ body.light-mode {
     justify-content: center;
     align-items: center;
     width: max-content;
-    margin: 1.5em;
+    margin: 0.5em;
     transition: all .2s;
-    font-size: 30px;
+    font-size: 35px;
 }
 
 .square {
@@ -167,7 +167,6 @@ nav {
     align-items: center;
     position: fixed;
     top: 0;
-    box-sizing: none;
     background-image: url("https://cdn.pixabay.com/photo/2016/05/22/20/13/background-1409125_960_720.png");
     background-repeat: no-repeat;
     background-position: center;
@@ -1062,6 +1061,10 @@ i {
 
 @media screen and (max-width: 1390px) {
 
+    .navbar_desktop {
+        padding-left: 15%;
+    }
+
     .presentacion {
     text-align: center;
     }
@@ -1185,6 +1188,11 @@ i {
 
 @media screen and (max-width: 775px) {
 
+    .navbar {
+    padding: 0;
+    font-size: 0.9em;
+    }
+
     h1 {
     text-align: center;
     }
@@ -1280,10 +1288,6 @@ i {
 
 @media screen and (max-width: 410px) {
 
-    nav {
-    align-items: normal;
-    }
-    
     .navbar_desktop {
     display: none;
     }
@@ -1380,10 +1384,6 @@ i {
 }
 
 @media screen and (max-width: 322px) {
-
-    nav {
-    align-items: normal;
-    }
 
     .navbar_desktop {
     display: none;
