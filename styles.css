@@ -1208,6 +1208,7 @@ i {
 
     .nav_container {
     position: fixed;
+    height: 0px;
     }
     
         
