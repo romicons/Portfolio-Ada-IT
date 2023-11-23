@@ -87,6 +87,8 @@ body.dark-mode {
     box-shadow: 0em 0em 0.375em 0.0625em #f2f1f9;
 }
 
+.dark-mode 
+
     /* CIERRE DEL ESTILADO DEL MODO NOCTURNO */
 
     /* ESTILADO POR DEFECTO DEL MODO LIGHT */
@@ -856,6 +858,7 @@ i {
     height: 100%; 
     overflow: auto; 
     background-color: rgba(0,0,0,0.5); 
+    color: black;
 }
 
 .modal_content {
@@ -894,6 +897,12 @@ i {
     color: #000;
     text-decoration: none;
     cursor: pointer;
+  }
+  
+  .modal_content img {
+    width: 40%;
+    display: flex;
+    margin: 0 auto;
   }
 
         /* CIERRE DEL ESTILADO DE LA VENTANA MODAL */
@@ -1297,10 +1306,6 @@ i {
 
     .navbar_desktop {
     display: none;
-    }
-    
-    .nav_container {
-    position: fixed;
     }
 
     .nav_mobile {
