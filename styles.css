@@ -107,6 +107,7 @@ body.light-mode {
     margin: 0.5em;
     transition: all .2s;
     font-size: 35px;
+    float: left;
 }
 
 .square {
@@ -1204,6 +1205,11 @@ i {
     nav {
     align-items: normal;
     }
+
+    .nav_container {
+    position: fixed;
+    }
+    
         
     .navbar_desktop {
     display: none;
@@ -1292,6 +1298,10 @@ i {
     display: none;
     }
     
+    .nav_container {
+    position: fixed;
+    }
+
     .nav_mobile {
     display: block;
     position: relative;
@@ -1380,106 +1390,5 @@ i {
 
     .nav_footer {
     display: none;
-    }
-}
-
-@media screen and (max-width: 322px) {
-
-    .navbar_desktop {
-    display: none;
-    }
-
-    .nav_mobile {
-    display: block;
-    position: relative;
-    }
-
-    .nav-item, .link-ltr {
-    line-height: 2em;
-    }
-
-    .button-contact {
-    box-shadow: 0em 0.1875em 0.8125em 0em rgb(194, 194, 194);
-    }
-
-    .container_presentation {
-    display: flex;
-    flex-direction: column;
-    flex-wrap: wrap;
-    align-items: center;
-    justify-content: center;
-    width: 100%;
-    }
-
-    .titles_container {
-    flex-direction: column;
-    text-align: center;
-    margin: 0 auto;
-    }
-
-    h1 {
-    margin-top: 0;
-    }
-
-    .welcome_title {
-    margin-top: 0.3em;
-    }
-
-    .diff_color {
-    justify-content: center;
-    margin-top: 0.5em;
-    margin-bottom: 0;
-    }
-
-    .presentation {
-    text-align: center;
-    }
-
-    .img_presentation_container {
-    width: 100%;
-    margin-top: 5%;
-    }
-
-    .section_title {
-    font-size: 2em;
-    }
-
-    .container_contact_section {
-    width: 80%;
-    flex-direction: column;
-    margin-bottom: 2em;
-    }
-
-    .contact_section, .form_section {
-    width: 100%;
-    margin: 0;
-    }
-
-    .link_contact {
-    flex-direction: column;
-    font-size: 0.8em;
-    margin: 0 auto;
-    }
-
-    .name_lastname {
-    display: flex;
-    flex-direction: column;
-    margin: 0 auto;
-    }
-
-    .mail_form {
-    margin: 0 auto;
-    }
-
-    .textarea_form {
-    margin: 0 auto;
-    }
-
-    .nav_footer {
-    display: none;
-    }
-
-    .footer_icon {
-    margin:0 0.8em;
     }
 }
