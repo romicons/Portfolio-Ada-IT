@@ -1,3 +1,21 @@
+// FUNCIÓN PARA INTERCAMBIAR ENTRE EL MODO OSCURO Y EL MODO DÍA
+
+document.addEventListener('DOMContentLoaded', function () {
+  var buttonSun = document.getElementById('button_sun');
+  var body = document.body;
+
+  var isDarkMode = localStorage.getItem('darkMode') === 'true';
+  if (isDarkMode) {
+    body.classList.add('dark-mode');
+  }
+  buttonSun.addEventListener('click', function () {
+    buttonSun.classList.toggle('animate');
+    isDarkMode = !isDarkMode;
+    localStorage.setItem('darkMode', isDarkMode);
+    body.classList.toggle('dark-mode');
+  });
+});
+
 // FUNCIÓN PARA DESPLEGAR Y CERRAR EL MENÚ MOBILE
 
 var bOpen = true;
