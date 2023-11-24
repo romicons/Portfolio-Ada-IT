@@ -745,7 +745,7 @@ i {
 .contact_description {
     display: flex;
     font-size: 1.2rem;
-    margin: 0 auto;
+    margin: 0 1.5em;
     text-align: justify;
 }
 
