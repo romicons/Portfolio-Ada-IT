@@ -619,7 +619,6 @@ i {
     border-radius: 10px;
     display: flex;
     flex-direction: column;
-    margin: 1em 1.5em;
     align-items: center;
     justify-content: center;
     box-shadow: #021E23 0px 3px 8px;
@@ -688,7 +687,6 @@ i {
     border-radius: 10px;
     display: flex;
     flex-direction: column;
-    margin: 1em 1em;
     align-items: center;
     justify-content: center;
     box-shadow: #021E23 0px 3px 8px;
@@ -1009,6 +1007,7 @@ i {
     padding-top: 2em;
     width: 62%;
     position: relative;
+    gap: 2em;
 }
 
 #quote {
@@ -1030,10 +1029,11 @@ i {
     flex-wrap: wrap;
     align-items: center;
     justify-content: center;
-    margin: 2.5em auto;
+    margin: 0 auto;
     padding-top: 3em;
     width: 70%;
     position: relative;
+    gap: 2em;
 }
 
 #contacto {
