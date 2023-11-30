@@ -65,7 +65,7 @@
 </div>
 <p align="center"><i>Cards de la sección Proyectos</i></p>
 
-<p>Por último, utilizando <img alt="Static Badge" src="https://img.shields.io/badge/FORM-SUBMIT-%23FEFDFC"> y <img alt="Static Badge" src="https://img.shields.io/badge/JavaScript-%23FEFDFC">, se añadieron validaciones que permiten que el formulario sea <b>completamente funcional</b> (si me envías un mensaje, ¡efectivamente me llega!).
+<p>Por último, utilizando <img alt="Static Badge" src="https://img.shields.io/badge/FORM-SUBMIT-%23FEFDFC"> y <img alt="Static Badge" src="https://img.shields.io/badge/JavaScript-%23FEFDFC">, se añadieron validaciones que permiten que el formulario sea <b>completamente funcional</b> (si me envías un mensaje, ¡efectivamente llega!).
 </p>
 
 <div align="center">
