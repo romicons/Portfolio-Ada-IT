@@ -9,12 +9,12 @@
 
 <div align="center">
   
-![Static Badge](https://img.shields.io/badge/html5-%23021E23)
-![Static Badge](https://img.shields.io/badge/css3-%23403153)
-![Static Badge](https://img.shields.io/badge/js-%239F5B98)
-![Static Badge](https://img.shields.io/badge/jquery-%23D58DC7)
-![Static Badge](https://img.shields.io/badge/responsive_design-%23DE94CF)
-![Static Badge](https://img.shields.io/badge/accessibility-%23E7A2D7)
+![Static Badge](https://img.shields.io/badge/HTML5-%23021E23)
+![Static Badge](https://img.shields.io/badge/CSS3-%23403153)
+![Static Badge](https://img.shields.io/badge/JS-%239F5B98)
+![Static Badge](https://img.shields.io/badge/JQuery-%23D58DC7)
+![Static Badge](https://img.shields.io/badge/Responsive_Design-%23DE94CF)
+![Static Badge](https://img.shields.io/badge/Accessibility-%23E7A2D7)
 
 ![Static Badge](https://img.shields.io/badge/STATUS-FINISHED-green)
 
@@ -29,7 +29,7 @@
 .
 
   
-<p> El documento se divide en distintas secciones, a las que podrás acceder scrolleando por la página, o simplemente haciendo click sobre los items del <img alt="Static Badge" src="https://img.shields.io/badge/nav-%239F5B98">. Podríamos decir que se trata de la piedra angular del proyecto, ya que en él se sintetizan a la perfección ambas características, tanto en su versión <img alt="Static Badge" src="https://img.shields.io/badge/desktop-%23FEFDFC">
+<p> El documento se divide en distintas secciones, a las que podrás acceder scrolleando por la página, o simplemente haciendo click sobre los items del <img alt="Static Badge" src="https://img.shields.io/badge/nav-%239F5B98">. En este sentido, este componente se convierte en la piedra angular del proyecto, pues en él se sintetizan a la perfección ambas características, tanto en su versión <img alt="Static Badge" src="https://img.shields.io/badge/desktop-%23FEFDFC">
 , como <img alt="Static Badge" src="https://img.shields.io/badge/mobile-%23FEFDFC">.
 </p>
 
@@ -65,7 +65,7 @@
 </div>
 <p align="center"><i>Cards de la sección Proyectos</i></p>
 
-<p>Por último, utilizando <img alt="Static Badge" src="https://img.shields.io/badge/form-submit-%23FEFDFC"> y <img alt="Static Badge" src="https://img.shields.io/badge/Javascript-%23FEFDFC">, se añadieron validaciones que permiten que el formulario sea <b>completamente funcional</b> (si me envías un mensaje, ¡efectivamente me llega!).
+<p>Por último, utilizando <img alt="Static Badge" src="https://img.shields.io/badge/FORM-SUBMIT-%23FEFDFC"> y <img alt="Static Badge" src="https://img.shields.io/badge/JavaScript-%23FEFDFC">, se añadieron validaciones que permiten que el formulario sea <b>completamente funcional</b> (si me envías un mensaje, ¡efectivamente me llega!).
 </p>
 
 <div align="center">
