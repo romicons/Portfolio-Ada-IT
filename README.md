@@ -74,6 +74,8 @@
 
 </div>
 
+<p align="center"><i>Form Validation</i></p>
+
 <p align="center"> ¡Gracias por tu visita! </p>
 
 <div align="center">
