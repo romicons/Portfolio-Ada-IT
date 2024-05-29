@@ -1007,20 +1007,20 @@ i {
 /* INICIO DEL ESTILADO SOBRE SELECTORES DE ID */
 
 #bienvenida {
-    width: 100%;
+    max-width: 2000px;
     position: relative;
     display: flex;
-    flex-grow: 1;
     flex-wrap: wrap;
     align-items: center;
-    align-content: center;
     justify-content: space-between;
     padding-top: 5em;
+    margin: 0 auto;
 }
 
 #conocimientos {
+    max-width: 2000px;
     display: flex;
-    flex-wrap: wrap;
+    flex-flow: column wrap;
     align-items: center;
     justify-content: center;
     margin: 2.5em auto;
@@ -1045,6 +1045,7 @@ i {
 }
 
 #proyectos {
+    max-width: 2000px;
     display: flex;
     flex-wrap: wrap;
     align-items: center;
@@ -1057,12 +1058,13 @@ i {
 }
 
 #contacto {
-    width: 100%;
+    max-width: 2000px;
     padding-top: 4em;
     display: flex;
     flex-wrap: wrap;
     align-items: center;
     justify-content: center;
+    margin: 0 auto;
 }
 
 #name-error, #lastname-error, #email-error, #textarea-error {
